@@ -1,9 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Follower from './Follower';
 
-class Followers extends Component {
-  render() {
-    return <div></div>;
-  }
-}
+const Followers = (props) => {
+  return (
+    <div>
+      {props.followers.map((follower) => (
+        <Follower key={follower.id} follower={follower} />
+      ))}
+    </div>
+  );
+};
 
 export default Followers;
